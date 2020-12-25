@@ -57,13 +57,15 @@ def main():
 
     parser.add_argument('--C', type=float, default=1.0, help="Inverse of regularization strength. Smaller values cause stronger regularization")
     parser.add_argument('--max_iter', type=int, default=100, help="Maximum number of iterations to converge")
+    parser.add_argument('--solver', type=str, default='lbfgs', help="Algorithm to use in the optimization problem")
 
     args = parser.parse_args()
 
     run.log("Regularization Strength:", np.float(args.C))
     run.log("Max iterations:", np.int(args.max_iter))
+    run.log("Solver:", np.str(args.solver))    
 
-    model = LogisticRegression(C=args.C, max_iter=args.max_iter).fit(x_train, y_train)
+    model = LogisticRegression(C=args.C, max_iter=args.max_iter, solver=args.solver).fit(x_train, y_train)
 
     accuracy = model.score(x_test, y_test)
     run.log("Accuracy", np.float(accuracy))
