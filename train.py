@@ -35,13 +35,14 @@ def clean_data(data):
     x_df["poutcome"] = x_df.poutcome.apply(lambda s: 1 if s == "success" else 0)
 
     y_df = x_df.pop("y").apply(lambda s: 1 if s == "yes" else 0)
+    return x_df, y_df
 
 
 # Create TabularDataset using TabularDatasetFactory
 dataset_path = "https://automlsamplenotebookdata.blob.core.windows.net/automl-sample-notebook-data/bankmarketing_train.csv"
 ds = TabularDatasetFactory.from_delimited_files(path = dataset_path)
 
-x, y = clean_data(ds.to_pandas_dataframe())
+x, y = clean_data(ds)
 
 # Split data into train and test sets.
 x_train, x_test, y_train, y_test = train_test_split(x, y , test_size=0.33, random_state=42)
