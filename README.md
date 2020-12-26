@@ -18,7 +18,7 @@ The best performance model was a VotingEnsemble obtained with the execution of A
 
 There are two computing resources involved in the Scikit-learn pipeline architecture: an instance used to run the notebook and a cluster used to run Hyperdrive. The notebook create the cluster using the sdk wich is also used to create the container wich will execute Hyperdrive. Once the container is properly started with all dependencies needed to run python with scikit-learn at most 4 simultaneaus jobs from Hyperdrive are executed to do hyperparameter tunning.
 
-The data is read using an Azure Dataset Tabular, created with the from_delimited_files method of the TabularDatasetFactory class from the csv file [from this link] (https://automlsamplenotebookdata.blob.core.windows.net/automl-sample-notebook-data/ bankmarketing_train.csv).
+The data is read using an Azure Dataset Tabular, created with the from_delimited_files method of the TabularDatasetFactory class from the csv file [from this link](https://automlsamplenotebookdata.blob.core.windows.net/automl-sample-notebook-data/bankmarketing_train.csv).
 
 The classification algorithm used was Logistic Regression and the hyper parameters wich were tunned by Hyperdrive where:
  - C: Inverse of regularization strength (smaller values specify stronger regularization);
