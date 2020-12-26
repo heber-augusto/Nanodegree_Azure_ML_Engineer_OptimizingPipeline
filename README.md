@@ -29,11 +29,12 @@ The benefits for RandomParameterSampling is the lower resource consume and in mo
 One of the benefit for the early stopping policy Bandit is that it is more suitable for resource savings.
 
 ## AutoML
-The VotingEnsemble is model wich combines different classifiers and use a majority vote or the average predicted probabilities to predict the class labels.
-The hyperparameters are the ensemble algorithms used, the weights and number of interations considered in each classifier.
+The VotingEnsemble is a model that combines different classifiers and uses the majority vote or the average of the predicted probabilities to predict the class labels.
+Hyperparameters are the ensemble algorithms used, the weights and the number of interactions considered in each classifier.
 
 ## Pipeline comparison
 **Compare the two models and their performance. What are the differences in accuracy? In architecture? If there was a difference, why do you think there was one?**
+The accuracy obtained 
 
 ## Future work
 **What are some areas of improvement for future experiments? Why might these improvements help the model?**
