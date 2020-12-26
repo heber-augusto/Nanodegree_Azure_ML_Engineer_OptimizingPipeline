@@ -14,7 +14,6 @@ It contains 20 input variables related to bank client, last contact information,
 The best performance model was a VotingEnsemble obtained with the execution of AutoML which resulted in 0.9176 of accuracy.
 
 ## Scikit-learn Pipeline
-**Explain the pipeline architecture, including data, hyperparameter tuning, and classification algorithm.**
 
 There are two computing resources involved in the Scikit-learn pipeline architecture: an instance used to run the notebook and a cluster used to run Hyperdrive. The notebook create the cluster using the sdk wich is also used to create the container wich will execute Hyperdrive. Once the container is properly started with all dependencies needed to run python with scikit-learn at most 4 simultaneaus jobs from Hyperdrive are executed to do hyperparameter tunning.
 
@@ -38,7 +37,3 @@ One of the benefit for the early stopping policy Bandit is that it is more suita
 
 ## Future work
 **What are some areas of improvement for future experiments? Why might these improvements help the model?**
-
-## Proof of cluster clean up
-**If you did not delete your compute cluster in the code, please complete this section. Otherwise, delete this section.**
-**Image of cluster marked for deletion**
