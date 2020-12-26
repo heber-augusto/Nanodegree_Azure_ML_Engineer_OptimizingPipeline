@@ -11,14 +11,20 @@ This dataset is called **Bank Marketing Data Set** and contains data about marke
 
 It contains 20 input variables related to bank client, last contact information, social and economic attributes and other attributes. The goal is to predict if the client will subscribe a term deposit with the bank. More details can be find at [this link](https://archive.ics.uci.edu/ml/datasets/Bank%20Marketing#).
 
-**In 1-2 sentences, explain the solution: e.g. "The best performing model was a ..."**
+The best performance model was a XX obtained with the execution of AutoML which resulted in 99% accuracy. 
 
 ## Scikit-learn Pipeline
 **Explain the pipeline architecture, including data, hyperparameter tuning, and classification algorithm.**
 
-The benefits for RandomParameterSampling is the lower consume and in most of the cases equivalent performance results comparing to other exhaustive methods.
+There are two computing resources involved in the Scikit-learn pipeline architecture: an instance used to run the notebook and a cluster used to run Hyperdrive. The notebook create the cluster using the sdk wich is also used to create the container wich will execute Hyperdrive. Once the container is properly started with all dependencies needed to run python with scikit-learn at most 4 simultaneaus jobs from Hyperdrive are executed to do hyperparameter tunning.
 
-**What are the benefits of the early stopping policy you chose?**
+Os dados são lidos utilizando um Azure Dataset Tabular, criado com o método from_delimited_files da classe TabularDatasetFactory a partir do arquivo csv [deste link](https://automlsamplenotebookdata.blob.core.windows.net/automl-sample-notebook-data/bankmarketing_train.csv).
+
+The classification algorithm used was Logistic Regression wich 
+
+The benefits for RandomParameterSampling is the lower resource consume and in most of the cases equivalent performance results comparing to other exhaustive methods.
+
+One of the benefit for the early stopping policy Bandit is that it is more suitable for resource savings.
 
 
 ## AutoML
