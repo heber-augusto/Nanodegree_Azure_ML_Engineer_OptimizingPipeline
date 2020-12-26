@@ -38,7 +38,6 @@ The best accuracy obtained with AutoML Voting Ensemble was 0.9176 (using 4 XGBoo
 AutoML results for the same method (LogisticRegression) presented lower accuracy (0.9108) than Hyperdrive approach.
 
 ## Future work
-**What are some areas of improvement for future experiments? Why might these improvements help the model?**
 
 It might be a good option to check improvements with Hyperdrive approach when using other hyperparameters, stopping policies and sampler.
 
