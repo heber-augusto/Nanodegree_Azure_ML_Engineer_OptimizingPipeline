@@ -33,8 +33,14 @@ The VotingEnsemble is a model that combines different classifiers and uses the m
 Hyperparameters are the ensemble algorithms used, the weights and the number of interactions considered in each classifier.
 
 ## Pipeline comparison
-**Compare the two models and their performance. What are the differences in accuracy? In architecture? If there was a difference, why do you think there was one?**
-The accuracy obtained 
+The best accuracy obtained with AutoML Voting Ensemble was 0.9176 (using 4 XGBoostClassifiers and 1 LighGBM with differents weights) and with Hyperdrive LogisticRegression classifier was 0.9117 (C=0.1, max_iter=500 and solver='newton-cg').  The difference is small (less than 1%) and is explained by the algorithms differences. 
+
+AutoML results for the same method (LogisticRegression) presented lower accuracy (0.9108) than Hyperdrive approach.
 
 ## Future work
 **What are some areas of improvement for future experiments? Why might these improvements help the model?**
+
+It might be a good option to check improvements with Hyperdrive approach when using other hyperparameters, stopping policies and sampler.
+
+It is also a good otpion to test improvements using algorithms not covered by AutoML. Neural networks algorithms for example should have results evaluated (HyperDrive is an option for using this type of model).
+
