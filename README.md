@@ -32,6 +32,8 @@ One of the benefit for the early stopping policy Bandit is that it is more suita
 The VotingEnsemble is a model that combines different classifiers and uses the majority vote or the average of the predicted probabilities to predict the class labels.
 Hyperparameters are the ensemble algorithms used, the weights and the number of interactions considered in each classifier.
 
+![Best 12 models](/docs/automl_results.png?raw=true "Best 12 AutoML models")
+
 ## Pipeline comparison
 The best accuracy obtained with AutoML Voting Ensemble was 0.9176 (using 4 XGBoostClassifiers and 1 LighGBM with differents weights) and with Hyperdrive LogisticRegression classifier was 0.9117 (C=0.1, max_iter=500 and solver='newton-cg').  The difference is small (less than 1%) and is explained by the algorithms differences. 
 
