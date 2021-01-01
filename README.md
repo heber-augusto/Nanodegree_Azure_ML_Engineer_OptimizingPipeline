@@ -28,6 +28,13 @@ The benefits for RandomParameterSampling is the lower resource consume and in mo
 
 One of the benefit for the early stopping policy Bandit is that it is more suitable for resource savings.
 
+Next two images show Hyperdrive top 10 results:
+
+![Top 10 Hyperdrive runs](/docs/hyperdrive_top10_childruns.png?raw=true "Top 10 Hyperdrive runs")
+
+![Top 10 Hyperdrive results](/docs/hyperdrive_top10_results.png?raw=true "Top 10 Hyperdrive results")
+
+
 ## AutoML
 The VotingEnsemble is a model that combines different classifiers and uses the majority vote or the average of the predicted probabilities to predict the class labels.
 Hyperparameters are the ensemble algorithms used, the weights and the number of interactions considered in each classifier.
